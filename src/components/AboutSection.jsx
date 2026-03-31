@@ -12,20 +12,21 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Software Engineer | Building AI-Powered Applications
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              I build and ship real-world web applications through projects and hackathons, 
+              focusing on performance, scalability, and delivering reliable user experiences.
+              I learn fast, iterate quickly, and approach problems with an engineering mindset.
+
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+            I’m passionate about building elegant solutions to complex problems, 
+            continuously learning and applying new technologies to 
+            stay at the forefront of the evolving software landscape.
+
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -35,10 +36,11 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="/AlfredMtambalika_Software_Engineer_Resume.pdf"
+                target="_blank"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
-                Download CV
+                📄 View Resume
               </a>
             </div>
           </div>
@@ -50,10 +52,10 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg"> Building Scalable Applications</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
+                    Designing and developing production-ready applications with a focus on 
+                    scalability, reliability, and clean architecture.
                   </p>
                 </div>
               </div>
@@ -64,10 +66,10 @@ export const AboutSection = () => {
                   <User className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
+                  <h4 className="font-semibold text-lg">Performance & System Design</h4>
                   <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
+                      Optimizing performance and exploring system design concepts, 
+                      including efficient data flow, caching strategies, and real-time systems.
                   </p>
                 </div>
               </div>
@@ -79,10 +81,10 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                  <h4 className="font-semibold text-lg">AI-Powered Applications</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                      Building intelligent applications that integrate AI to solve real-world 
+                      problems and enhance user experiences.
                   </p>
                 </div>
               </div>
