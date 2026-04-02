@@ -4,7 +4,7 @@ const projects = [
   {
     id: 1,
     title: "VC Intelligence",
-    description: "A beautiful landing page app using React and Tailwind.",
+    description: "AI-powered VC discovery platform that finds companies, enriches live data, and scores investment fit in one interface.",
     image: "/projects/vc-intelligence.png",
     tags: ["Next.js", "TypeScript"],
     demoUrl: "https://vc-intelligence-gray.vercel.app/",
