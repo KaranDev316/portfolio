@@ -1,133 +1,147 @@
-# Build a Modern Portfolio Website with React & TailwindCSS
 
-<div align="center">
-  <br />
-  <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank">
-    <img src="./banner.png" alt="Portfolio Website Banner">
+# 🚀 Alfred Mtambalika
+
+<p align="center">
+  <b>Aspiring Software Engineer | Building Scalable & AI-Powered Applications</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/KaranDev316>
+    <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=for-the-badge" />
   </a>
-  <br />
-  <div>
-    <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-    <img src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-    <img src="https://img.shields.io/badge/-Lucide Icons-FD4D4D?style=for-the-badge&logo=lucide" alt="Lucide Icons" />
-    <img src="https://img.shields.io/badge/-Radix UI-9D4EDD?style=for-the-badge&logo=data:image/svg+xml;base64..." alt="Radix UI" />
-  </div>
-  <h3 align="center">Create a Stunning Developer Portfolio with Animations, Dark Mode, and Projects Showcase</h3>
-  <div align="center">
-    Follow the full video tutorial on 
-    <a href="https://youtu.be/YOUR_VIDEO_ID" target="_blank"><b>YouTube</b></a>
-  </div>
-  <br />
-</div>
-
-## 📋 Table of Contents
-
-1. [Introduction](#-introduction)
-2. [Tech Stack](#-tech-stack)
-3. [Features](#-features)
-4. [Quick Start](#-quick-start)
-5. [Screenshots](#-screenshots)
-6. [Deployment](#-deployment)
+  <a href="https://github.com/KaranDev316">
+    <img src="https://img.shields.io/github/stars/yourusername?label=Stars&style=for-the-badge" />
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=yourusername&style=for-the-badge" />
+</p>
 
 ---
 
-## 🚀 Introduction
+## 👨‍💻 About Me
 
-In this tutorial, you'll learn how to build a modern portfolio website using **React**, **TailwindCSS**, **Vite**, and **Lucide Icons**. From dark mode support to responsive animations and deployable project showcases, this video walks you through every step—perfect for developers looking to level up their frontend skills or apply for jobs.
+Hi, I'm **Alfred Mtambalika** — an aspiring Software Engineer passionate about building **scalable, production-ready applications**.
 
-🎥 Watch the full tutorial: [YouTube](https://youtu.be/YOUR_VIDEO_ID)
-
----
-
-## ⚙️ Tech Stack
-
-* **React** – Component-based UI development
-* **Vite** – Lightning-fast build tool
-* **TailwindCSS** – Utility-first CSS for styling
-* **Lucide Icons** – Clean and beautiful icon pack
-* **Radix UI** – Accessible component primitives
-* **TypeScript (optional)** – Type safety and tooling
-* **GitHub & Vercel** – Deployment
+* ⚡ I build real-world projects with performance in mind
+* 🧠 I solve problems analytically with an engineering mindset
+* 🤖 Currently exploring **AI-powered applications & system design**
+* 🚀 Focused on clean architecture, scalability, and user experience
 
 ---
 
-## ⚡️ Features
+## 🧩 What I Do
 
-* 🌑 **Light/Dark Mode Toggle**
-  Save theme preference in local storage with beautiful transitions
-
-* 💫 **Animated Backgrounds**
-  Stars, meteors, scroll effects, and glowing UI elements
-
-* 📱 **Responsive Navigation**
-  Desktop and mobile menus with glassmorphism
-
-* 👨‍💻 **Hero & About Sections**
-  Showcase who you are with smooth intro animations and buttons
-
-* 📊 **Skills Grid**
-  Filterable progress bars and categories with animated width
-
-* 🖼️ **Projects Showcase**
-  Display screenshots, tech stacks, and GitHub/demo links
-
-* 📩 **Contact Section**
-  Social icons + responsive contact form with toast notifications
-
-* 🚀 **One-Click Deployment**
-  Easily host your site with Vercel and GitHub
+* 🏗️ Build scalable, production-ready applications
+* ⚙️ Optimize performance & explore system design
+* 🤖 Develop AI-powered tools that solve real problems
 
 ---
 
-## 👌 Quick Start
+## 🛠️ Tech Stack
 
-### Prerequisites
+### 🚀 Languages & Core
 
-* [Node.js](https://nodejs.org/)
-* [Git](https://git-scm.com/)
+<p>
+  <img src="https://skillicons.dev/icons?i=js,ts,python,java" />
+</p>
 
-### Clone and Run
+### 🎨 Frontend
 
-```bash
-git clone https://github.com/yourusername/react-tailwind-portfolio.git
-cd react-tailwind-portfolio
-npm install
-npm run dev
+<p>
+  <img src="https://skillicons.dev/icons?i=react,tailwind,html,css" />
+</p>
+
+### ⚙️ Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=nodejs,express" />
+</p>
+
+### 🗄️ Databases
+
+<p>
+  <img src="https://skillicons.dev/icons?i=mongodb,mysql" />
+</p>
+
+### 🧰 Tools
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github,postman,vite" />
+</p>
+
+---
+
+## 💡 Featured Project
+
+### 🔹 VC Intelligence
+
+**Next.js • TypeScript**
+
+AI-powered VC discovery platform that:
+
+* Finds companies
+* Enriches live data
+* Scores investment fit
+
+🚧 More projects coming soon — actively building.
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
+</p>
+
+---
+
+## 📈 Skills Snapshot
+
+```
+Frontend      █████████░░  (Strong)
+Backend       ████████░░░  (Good)
+Databases     ███████░░░░  (Growing)
+System Design ██████░░░░░  (Learning)
+AI/ML         ██████░░░░░  (Exploring)
 ```
 
-Your app will be available at: [http://localhost:5173](http://localhost:5173)
+---
+
+## 🌐 Connect With Me
+
+<p>
+  <a href="https://github.com/KaranDev316">
+    <img src="https://skillicons.dev/icons?i=github" />
+  </a>
+  <!-- Add LinkedIn if you want -->
+</p>
+
+* 📍 Ahmedabad, India
+* 📧 [your-email@example.com](mailto:alfredm1605@gmail.com)
 
 ---
 
-## 🖼️ Screenshots
+## ⚡ Philosophy
 
-> 📸 Add screenshots of your Hero section, Projects grid, and Contact form here to show off your site.
-
----
-
-## ☁️ Deployment
-
-### Deploy on Vercel
-
-1. Push your code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Click **Deploy**
-
-Your live website will be hosted on a custom subdomain (e.g. `https://your-name.vercel.app`)
+> I don’t just build projects — I build systems that scale, perform, and solve real problems.
 
 ---
 
-## 🔗 Useful Links
+## 🚀 Currently Focused On
 
-* [React Documentation](https://reactjs.org/)
-* [Tailwind CSS Docs](https://tailwindcss.com/)
-* [Lucide Icons](https://lucide.dev/)
-* [Radix UI](https://www.radix-ui.com/)
-* [Vite](https://vitejs.dev/)
-* [Vercel](https://vercel.com/)
+* 🤖 AI-powered applications
+* 🏗️ System design & scalable architecture
+* ⚡ High-performance web apps
 
 ---
 
-Let me know if you'd like me to generate a version with your actual GitHub repo, YouTube URL, or a banner image suggestion!
+## ⭐ Final Note
+
+This portfolio is continuously evolving as I grow as an engineer.
+
+
+
+
+
+
+
