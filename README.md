@@ -7,12 +7,12 @@
 
 <p align="center">
   <a href="https://github.com/KaranDev316>
-    <img src="https://img.shields.io/github/followers/yourusername?label=Followers&style=for-the-badge" />
+    <img src="https://img.shields.io/github/followers/KaranDev316?label=Followers&style=for-the-badge" />
   </a>
   <a href="https://github.com/KaranDev316">
-    <img src="https://img.shields.io/github/stars/yourusername?label=Stars&style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/KaranDev316?label=Stars&style=for-the-badge" />
   </a>
-  <img src="https://komarev.com/ghpvc/?username=yourusername&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=KaranDev316&style=for-the-badge" />
 </p>
 
 ---
@@ -89,8 +89,8 @@ AI-powered VC discovery platform that:
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=KaranDev316&show_icons=true&theme=tokyonight&hide_border=true" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KaranDev316&layout=compact&theme=tokyonight&hide_border=true" height="170"/>
 </p>
 
 ---
@@ -117,7 +117,7 @@ AI/ML         ██████░░░░░  (Exploring)
 </p>
 
 * 📍 Ahmedabad, India
-* 📧 [your-email@example.com](mailto:alfredm1605@gmail.com)
+* 📧 [Email](mailto:alfredm1605@gmail.com)
 
 ---
 
