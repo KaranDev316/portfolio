@@ -11,6 +11,17 @@ const projects = [
     githubUrl: "https://github.com/KaranDev316/VC-Intelligence",
   },
 
+  {
+    
+  id: 2,
+    title: "PromptSphere",
+    description: "A fast, minimal AI chat workspace designed for clean, secure, and distraction-free conversations.",
+    image: "/projects/propmptsphere.png",
+    tags: ["React", "Node.js", "Express", "MongoDB", "OpenAI API"],
+    demoUrl: "https://prompt-sphere-gules.vercel.app/",
+    githubUrl: "https://github.com/KaranDev316/PromptSphere",
+  },
+
 ];
 
 export const ProjectsSection = () => {
