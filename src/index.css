@@ -154,6 +154,11 @@ section { padding-block: 88px 24px; }
   section { padding-block: 64px 12px; }
 }
 h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 4.4vw, 3.2rem); line-height: 1.02; letter-spacing: -.03em; margin: 0; text-wrap: balance; max-width: 17em; }
+/* the stack headline is the longest of the section headings (41 chars ≈ 18em at
+   this weight), so it steps down in size and drops the generic 17em cap to hold
+   one line beside the label column — including in the tablet range below, where
+   that column narrows to 150px */
+#stack h2 { font-size: clamp(1.7rem, 3.5vw, 2.9rem); max-width: none; }
 
 /* about */
 .about-grid { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 32px; }
@@ -218,7 +223,9 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
   .tier { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 22px; }
 }
 .tier h3 { font-family: var(--font-display); font-size: 1.35rem; margin: 6px 0 4px; letter-spacing: -.02em; }
-.tier p { margin: 0; font-size: 14px; color: var(--muted); }
+/* the tier descriptions run longer than a single column line on every width,
+   so they balance like h1/h2 to avoid a one-word final line */
+.tier p { margin: 0; font-size: 14px; color: var(--muted); text-wrap: balance; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; }
 .chips li { list-style: none; font-weight: 500; font-size: 15px; padding: 9px 15px; border-radius: 9px; border: 1px solid var(--line); background: var(--bg); transition: border-color .2s, color .2s; }
 .chips li:hover { border-color: var(--accent); }

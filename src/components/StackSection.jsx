@@ -2,14 +2,14 @@ const TIERS = [
   {
     label: "Tier 1",
     title: "Core stack",
-    note: "Where I move fastest.",
+    note: "The technologies at the center of my development journey.",
     chips: ["TypeScript", "React", "Python", "FastAPI", "PostgreSQL"],
     strong: true,
   },
   {
     label: "Tier 2",
     title: "Additional technologies",
-    note: "Used on real projects.",
+    note: "Tools I've worked with across projects and coursework.",
     chips: [
       "HTML / CSS",
       "Tailwind CSS",
@@ -30,7 +30,7 @@ export const StackSection = () => {
     <section id="stack">
       <div className="sec-head">
         <div className="label">Stack</div>
-        <h2>What I reach for first, and what I&apos;m still growing into.</h2>
+        <h2>The technologies I use to build software.</h2>
       </div>
       <div className="tiers">
         {TIERS.map((tier) => (
