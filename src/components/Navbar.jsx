@@ -1,91 +1,94 @@
-import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+const NAV_ITEMS = [
+  { id: "about", label: "About" },
+  { id: "work", label: "Work" },
+  { id: "stack", label: "Stack" },
+  { id: "contact", label: "Contact" },
 ];
 
+const THEME_MODES = ["auto", "light", "dark"];
+
+const getStoredTheme = () => {
+  try {
+    const stored = localStorage.getItem("theme");
+    if (THEME_MODES.includes(stored)) return stored;
+  } catch (error) {
+    // localStorage may be unavailable (private mode, blocked cookies)
+  }
+  return "auto";
+};
+
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mode, setMode] = useState(getStoredTheme);
+  const [activeSection, setActiveSection] = useState("");
 
+  // Apply the selected theme to the document root and persist it.
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
-    };
+    const root = document.documentElement;
+    if (mode === "auto") {
+      root.removeAttribute("data-theme");
+    } else {
+      root.setAttribute("data-theme", mode);
+    }
+    try {
+      localStorage.setItem("theme", mode);
+    } catch (error) {
+      // ignore write failures
+    }
+  }, [mode]);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  // Highlight the nav link for the section currently in view.
+  useEffect(() => {
+    if (!("IntersectionObserver" in window)) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+
+    NAV_ITEMS.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
   }, []);
-  return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#hero"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Alfred's </span>{" "}
-            Portfolio
-          </span>
-        </a>
 
-        {/* desktop nav */}
-        <div className="hidden md:flex space-x-8">
-          {navItems.map((item, key) => (
+  const cycleTheme = () =>
+    setMode((prev) => THEME_MODES[(THEME_MODES.indexOf(prev) + 1) % THEME_MODES.length]);
+
+  return (
+    <header className="bar">
+      <div className="wrap">
+        <a className="brand" href="#top">
+          <i aria-hidden="true" />
+          Alfred Mtambalika
+        </a>
+        <nav aria-label="Primary">
+          {NAV_ITEMS.map((item) => (
             <a
-              key={key}
-              href={item.href}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              key={item.id}
+              href={`#${item.id}`}
+              aria-current={activeSection === item.id ? "true" : "false"}
             >
-              {item.name}
+              {item.label}
             </a>
           ))}
-        </div>
-
-        {/* mobile nav */}
-
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        </button>
-
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex flex-col space-y-8 text-xl">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-        </div>
+          <button
+            className="theme"
+            type="button"
+            aria-label="Switch colour theme"
+            onClick={cycleTheme}
+          >
+            theme: {mode}
+          </button>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
