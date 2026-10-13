@@ -35,7 +35,6 @@ export const Navbar = () => {
     <header className="bar">
       <div className="wrap">
         <a className="brand" href="#top">
-          <i aria-hidden="true" />
           Alfred Mtambalika
         </a>
         <nav aria-label="Primary">
