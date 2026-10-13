@@ -7,36 +7,8 @@ const NAV_ITEMS = [
   { id: "contact", label: "Contact" },
 ];
 
-const THEME_MODES = ["auto", "light", "dark"];
-
-const getStoredTheme = () => {
-  try {
-    const stored = localStorage.getItem("theme");
-    if (THEME_MODES.includes(stored)) return stored;
-  } catch (error) {
-    // localStorage may be unavailable (private mode, blocked cookies)
-  }
-  return "auto";
-};
-
 export const Navbar = () => {
-  const [mode, setMode] = useState(getStoredTheme);
   const [activeSection, setActiveSection] = useState("");
-
-  // Apply the selected theme to the document root and persist it.
-  useEffect(() => {
-    const root = document.documentElement;
-    if (mode === "auto") {
-      root.removeAttribute("data-theme");
-    } else {
-      root.setAttribute("data-theme", mode);
-    }
-    try {
-      localStorage.setItem("theme", mode);
-    } catch (error) {
-      // ignore write failures
-    }
-  }, [mode]);
 
   // Highlight the nav link for the section currently in view.
   useEffect(() => {
@@ -59,9 +31,6 @@ export const Navbar = () => {
     return () => observer.disconnect();
   }, []);
 
-  const cycleTheme = () =>
-    setMode((prev) => THEME_MODES[(THEME_MODES.indexOf(prev) + 1) % THEME_MODES.length]);
-
   return (
     <header className="bar">
       <div className="wrap">
@@ -79,14 +48,6 @@ export const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <button
-            className="theme"
-            type="button"
-            aria-label="Switch colour theme"
-            onClick={cycleTheme}
-          >
-            theme: {mode}
-          </button>
         </nav>
       </div>
     </header>

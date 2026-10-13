@@ -13,7 +13,7 @@
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
 
-  /* theme tokens */
+  /* colour tokens */
   --bg: #eef1f6;
   --surface: #ffffff;
   --surface-2: #e3e8f1;
@@ -30,7 +30,7 @@
   --trace-dim: #7f8cab;
   --trace-hot: #8fa6ff;
   --shadow: 0 30px 60px -30px rgba(13, 20, 36, .35);
-  /* mockup surfaces keep their own colours in both themes */
+  /* product mockups keep their own fixed colours */
   --m-dark: #070a12;
   --m-dark-2: #111827;
   --m-dark-line: #243049;
@@ -44,46 +44,6 @@
   --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #080b13;
-    --surface: #0f1420;
-    --surface-2: #161d2e;
-    --fg: #e8edf8;
-    --muted: #8e9ab6;
-    --line: #232c42;
-    --grid: rgba(232, 237, 248, .045);
-    --accent: #7f9bff;
-    --accent-soft: rgba(127, 155, 255, .12);
-    --accent-ink: #080b13;
-    --ok: #4fd1a1;
-    --trace-bg: #05070d;
-    --trace-fg: #dfe6f5;
-    --trace-dim: #6a7794;
-    --trace-hot: #9db3ff;
-    --shadow: 0 30px 60px -30px rgba(0, 0, 0, .8);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #080b13;
-  --surface: #0f1420;
-  --surface-2: #161d2e;
-  --fg: #e8edf8;
-  --muted: #8e9ab6;
-  --line: #232c42;
-  --grid: rgba(232, 237, 248, .045);
-  --accent: #7f9bff;
-  --accent-soft: rgba(127, 155, 255, .12);
-  --accent-ink: #080b13;
-  --ok: #4fd1a1;
-  --trace-bg: #05070d;
-  --trace-fg: #dfe6f5;
-  --trace-dim: #6a7794;
-  --trace-hot: #9db3ff;
-  --shadow: 0 30px 60px -30px rgba(0, 0, 0, .8);
-  color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; }
@@ -125,21 +85,8 @@ nav { display: flex; align-items: center; gap: 6px; font-size: 15px; }
 nav a { text-decoration: none; color: var(--muted); font-weight: 500; padding: 7px 12px; border-radius: 8px; }
 nav a:hover { color: var(--fg); }
 nav a[aria-current="true"] { color: var(--fg); background: var(--accent-soft); }
-.theme {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--fg);
-  padding: 8px 13px;
-  border-radius: 999px;
-  cursor: pointer;
-  margin-left: 8px;
-}
-.theme:hover { border-color: var(--accent); }
 @media (max-width: 700px) {
   nav a { display: none; }
-  .theme { margin-left: 0; }
 }
 
 /* hero */
