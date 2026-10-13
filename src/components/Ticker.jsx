@@ -1,11 +1,9 @@
 const CORE_STACK = [
-  "Next.js",
   "TypeScript",
-  "Node.js",
-  "Express",
-  "MongoDB",
-  "OpenAI API",
-  "Tailwind CSS",
+  "React",
+  "Python",
+  "FastAPI",
+  "PostgreSQL",
 ];
 
 export const Ticker = () => {
