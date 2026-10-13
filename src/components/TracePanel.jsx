@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 // Illustrative request trace for the PromptSphere chat backend.
 const ROWS = [
-  { label: "client", note: "React chat UI", left: "0%", width: "2%", ms: "0 ms" },
-  { label: "express", note: "validate + route", left: "2%", width: "3%", ms: "6 ms" },
+  { label: "client", note: "React + TypeScript UI", left: "0%", width: "2%", ms: "0 ms" },
+  { label: "fastapi", note: "validate + route", left: "2%", width: "3%", ms: "6 ms" },
   { label: "openai api", note: "stream completion", left: "5%", width: "80%", ms: "388 ms" },
-  { label: "mongodb", note: "save conversation", left: "85%", width: "10%", ms: "14 ms" },
+  { label: "postgresql", note: "save conversation", left: "85%", width: "10%", ms: "14 ms" },
   { label: "response", note: "tokens to client", left: "95%", width: "5%", ms: "\u00a0" },
 ];
 
