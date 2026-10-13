@@ -7,7 +7,7 @@ const PROJECTS = [
     label: "AI \u00b7 Investor tooling",
     title: "VC Intelligence",
     description:
-      "An AI-powered discovery platform for investors. It finds companies, enriches them with live data and scores investment fit, all in one interface.",
+      "Discover startups, enrich company profiles with website data, and evaluate investment fit in one workflow. VC Intelligence helps investors move from company discovery to structured research faster.",
     flowLabel: "Product flow",
     flow: ["Search", "Enrich with live data", "Score fit"],
     tags: ["Next.js", "TypeScript"],
@@ -108,7 +108,7 @@ export const WorkSection = () => {
     <section id="work">
       <div className="sec-head">
         <div className="label">Selected work</div>
-        <h2>Two products, built end to end.</h2>
+        <h2>Selected work, built around real problems.</h2>
       </div>
 
       {PROJECTS.map((project) => (
