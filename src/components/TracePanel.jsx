@@ -35,7 +35,7 @@ export const TracePanel = () => {
   }, [reducedMotion]);
 
   return (
-    <div className="trace" aria-label="Example request trace through an AI chat backend">
+    <div className="trace" role="group" aria-label="Example request trace through an AI chat backend">
       <div className="trace-head">
         <span className="lights" aria-hidden="true">
           <i /><i /><i />

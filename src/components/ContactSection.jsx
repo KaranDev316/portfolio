@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const EMAIL = "alfredm1605@gmail.com";
 
@@ -11,21 +11,38 @@ const SOCIALS = [
 
 export const ContactSection = () => {
   const [copyLabel, setCopyLabel] = useState("copy");
+  const [copyStatus, setCopyStatus] = useState("");
+  const resetTimer = useRef(null);
+  const copyRequest = useRef(0);
+
+  useEffect(() => () => {
+    clearTimeout(resetTimer.current);
+    copyRequest.current += 1;
+  }, []);
 
   const handleCopy = async () => {
+    clearTimeout(resetTimer.current);
+    const request = ++copyRequest.current;
+    setCopyLabel("copy");
+    setCopyStatus("");
+
     try {
       await navigator.clipboard.writeText(EMAIL);
+      if (request !== copyRequest.current) return;
       setCopyLabel("copied");
-      setTimeout(() => setCopyLabel("copy"), 1400);
-    } catch (error) {
+      setCopyStatus("Email address copied to clipboard.");
+      resetTimer.current = setTimeout(() => setCopyLabel("copy"), 1400);
+    } catch {
+      if (request !== copyRequest.current) return;
       setCopyLabel("select text");
+      setCopyStatus("Could not copy the email address. Select and copy the displayed email address manually.");
     }
   };
 
   return (
-    <div className="closing" id="contact">
+    <section className="closing" id="contact" aria-labelledby="contact-heading">
       <div className="label">Contact</div>
-      <h2>Open to software engineering roles.</h2>
+      <h2 id="contact-heading">Open to software engineering roles.</h2>
       <p>
         If you&apos;re hiring, or have a project that needs an engineer who ships, email is the
         quickest way to reach me.
@@ -41,6 +58,9 @@ export const ContactSection = () => {
           {copyLabel}
         </button>
       </div>
+      <span className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        {copyStatus}
+      </span>
       <div className="social">
         {SOCIALS.map((item) => (
           <a key={item.label} href={item.href} target="_blank" rel="noreferrer">
@@ -48,6 +68,6 @@ export const ContactSection = () => {
           </a>
         ))}
       </div>
-    </div>
+    </section>
   );
 };

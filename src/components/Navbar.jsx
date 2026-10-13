@@ -12,23 +12,29 @@ export const Navbar = () => {
 
   // Highlight the nav link for the section currently in view.
   useEffect(() => {
-    if (!("IntersectionObserver" in window)) return undefined;
+    let frame;
+    const updateActiveSection = () => {
+      frame = undefined;
+      const atBottom = window.scrollY > 0 &&
+        window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+      const visibleSection = NAV_ITEMS.filter(({ id }) => {
+        const element = document.getElementById(id);
+        return element && element.getBoundingClientRect().top <= window.innerHeight * 0.45;
+      }).at(-1);
+      setActiveSection(atBottom ? "contact" : visibleSection?.id || "");
+    };
+    const scheduleUpdate = () => {
+      if (frame === undefined) frame = window.requestAnimationFrame(updateActiveSection);
+    };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActiveSection(entry.target.id);
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-
-    NAV_ITEMS.forEach(({ id }) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
+    updateActiveSection();
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
+    return () => {
+      window.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
+      window.cancelAnimationFrame(frame);
+    };
   }, []);
 
   return (

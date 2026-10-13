@@ -10,8 +10,9 @@ import { Footer } from "../components/Footer";
 export const Home = () => {
   return (
     <>
+      <a className="skip-link" href="#top">Skip to content</a>
       <Navbar />
-      <main id="top">
+      <main id="top" tabIndex={-1}>
         <HeroSection />
         <Ticker />
         <div className="wrap">

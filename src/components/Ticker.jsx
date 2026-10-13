@@ -9,7 +9,7 @@ const CORE_STACK = [
 export const Ticker = () => {
   return (
     <div className="ticker ticker-wrap">
-      <div className="wrap" aria-label="Core stack">
+      <div className="wrap" role="group" aria-label="Core stack">
         {CORE_STACK.map((item) => (
           <span key={item}>{item}</span>
         ))}

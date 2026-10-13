@@ -53,7 +53,7 @@ export const WorkSection = () => {
             <span className="label">{project.label}</span>
             <h3>{project.title}</h3>
             <p>{project.description}</p>
-            <div className="flow" aria-label={project.flowLabel}>
+            <div className="flow" role="group" aria-label={project.flowLabel}>
               {project.flow.map((step, index) => (
                 <span className="step" key={step}>
                   {index > 0 && (
