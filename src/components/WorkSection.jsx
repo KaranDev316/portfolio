@@ -31,59 +31,15 @@ const PROJECTS = [
     tags: ["React", "Node.js", "Express", "MongoDB", "OpenAI API"],
     demoUrl: "https://prompt-sphere-gules.vercel.app/",
     sourceUrl: "https://github.com/KaranDev316/PromptSphere",
+    image: {
+      src: "/projects/promptsphere.png",
+      alt: "PromptSphere landing page: a bold 'Elegant conversations, crafted for clarity' headline beside a dark chat card reading 'AI conversations that feel effortless'.",
+      width: 1600,
+      height: 984,
+    },
     flip: true,
   },
 ];
-
-// Renders the product visual for a project: the real product screenshot when
-// one is set, otherwise a hand-drawn mockup of the landing page. Kept as a
-// plain render helper (rather than a component) so it can take a single
-// project argument without needing prop-type declarations.
-const renderMockup = (project) => {
-  if (project.image) {
-    return (
-      <div className="mock shot">
-        <img
-          src={project.image.src}
-          alt={project.image.alt}
-          width={project.image.width}
-          height={project.image.height}
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div className="mock light" role="img" aria-label={`Illustration of the ${project.title} landing page`}>
-      <div className="chrome">
-        <span className="d">
-          <i /><i /><i />
-        </span>
-        <span className="u">promptsphere</span>
-      </div>
-      <div className="ps">
-        <div>
-          <div className="k">PROMPTSPHERE</div>
-          <h4>Elegant conversations, crafted for clarity.</h4>
-          <div className="l" />
-          <div className="l s" />
-          <div className="b">
-            <i /><i />
-          </div>
-        </div>
-        <div className="card">
-          <p>AI conversations that feel effortless.</p>
-          <div>
-            <div className="m" />
-            <div className="m" />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const WorkSection = () => {
   return (
@@ -131,7 +87,16 @@ export const WorkSection = () => {
               </a>
             </div>
           </div>
-          {renderMockup(project)}
+          <div className="mock">
+            <img
+              src={project.image.src}
+              alt={project.image.alt}
+              width={project.image.width}
+              height={project.image.height}
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </article>
       ))}
 

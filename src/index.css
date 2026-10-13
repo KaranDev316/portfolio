@@ -2,7 +2,7 @@
    Alfred Mtambalika — portfolio
    Editorial column on a faint engineering grid.
    Hero = big statement + request-trace panel.
-   Work = case files with product mockups.
+   Work = case files with product screenshots.
    Closing = one large contact panel.
    ============================================================ */
 
@@ -29,11 +29,6 @@
   --trace-dim: #7f8cab;
   --trace-hot: #8fa6ff;
   --shadow: 0 30px 60px -30px rgba(13, 20, 36, .35);
-  /* product mockups keep their own fixed colours */
-  --m-light: #ffffff;
-  --m-light-line: #e4e6ec;
-  --m-light-fg: #0a0a0f;
-  --m-light-dim: #6b7080;
   --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -204,33 +199,10 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
 .links a { text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
 .links a:hover { color: var(--accent); }
 
-/* product mockups */
+/* product screenshots */
 .mock { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .35s ease; }
 .case:hover .mock { transform: translateY(-4px); }
-.mock .chrome { display: flex; align-items: center; gap: 12px; padding: 11px 14px; font-family: var(--font-mono); font-size: 11px; }
-.mock .chrome .d { display: flex; gap: 6px; }
-.mock .chrome .d i { width: 9px; height: 9px; border-radius: 50%; background: currentColor; opacity: .25; }
-.mock .chrome .u { flex: 1; min-width: 0; padding: 4px 10px; border-radius: 6px; opacity: .8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.mock.light { background: var(--m-light); color: var(--m-light-fg); }
-.mock.light .chrome { border-bottom: 1px solid var(--m-light-line); color: var(--m-light-dim); }
-.mock.light .chrome .u { background: #f2f3f7; }
-/* real product screenshot, framed like the drawn mockups */
-.mock.shot img { display: block; width: 100%; height: auto; }
-.ps { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; padding: 34px 26px 30px; align-items: center; }
-@media (max-width: 480px) {
-  .ps { grid-template-columns: minmax(0, 1fr); }
-}
-.ps .k { font-family: var(--font-mono); font-size: 9px; letter-spacing: .16em; color: var(--m-light-dim); margin-bottom: 14px; }
-.ps h4 { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.5rem, 3vw, 2.1rem); line-height: .98; letter-spacing: -.035em; margin: 0 0 16px; }
-.ps .l { height: 5px; border-radius: 3px; background: var(--m-light-line); margin-bottom: 6px; width: 90%; }
-.ps .l.s { width: 64%; margin-bottom: 18px; }
-.ps .b { display: flex; gap: 8px; }
-.ps .b i { height: 22px; width: 70px; border-radius: 999px; background: var(--m-light-fg); }
-.ps .b i + i { background: transparent; border: 1px solid var(--m-light-line); width: 86px; }
-.ps .card { background: #0a0a0f; color: #fff; border-radius: 12px; padding: 18px; min-height: 150px; display: flex; flex-direction: column; justify-content: space-between; gap: 22px; }
-.ps .card p { font-size: 13px; line-height: 1.3; margin: 0; max-width: none; color: #fff; }
-.ps .card .m { height: 4px; border-radius: 2px; background: #ffffff30; }
-.ps .card .m + .m { width: 60%; margin-top: 6px; }
+.mock img { display: block; width: 100%; height: auto; }
 
 /* stack tiers */
 .tiers { display: grid; gap: 16px; }
