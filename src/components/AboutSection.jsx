@@ -3,7 +3,7 @@ export const AboutSection = () => {
     <section id="about">
       <div className="sec-head">
         <div className="label">About</div>
-        <h2>I learn fast, iterate quickly, and think like an engineer.</h2>
+        <h2>I turn real-world problems into practical software.</h2>
       </div>
       <div className="about-grid">
         <div className="label" />
