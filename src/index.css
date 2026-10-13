@@ -94,12 +94,6 @@ nav a[aria-current="true"] { color: var(--fg); background: var(--accent-soft); }
 @media (max-width: 920px) {
   .hero { grid-template-columns: minmax(0, 1fr); gap: 44px; padding-block: 48px 44px; }
 }
-.status { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 26px; padding: 7px 14px 7px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); }
-.status i { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); animation: pulse 2.4s ease-in-out infinite; }
-@keyframes pulse {
-  50% { box-shadow: 0 0 0 6px transparent; }
-  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--ok) 45%, transparent); }
-}
 h1 {
   font-family: var(--font-display);
   font-weight: 800;

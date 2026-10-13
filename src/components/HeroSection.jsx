@@ -4,10 +4,6 @@ export const HeroSection = () => {
   return (
     <div className="wrap hero">
       <div>
-        <div className="status label">
-          <i aria-hidden="true" />
-          Open to roles &middot; Ahmedabad, India
-        </div>
         <h1>
           I build software that solves <em>real problems</em>.
         </h1>
