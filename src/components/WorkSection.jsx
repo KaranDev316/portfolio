@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 const GITHUB_URL = "https://github.com/KaranDev316";
 
 const PROJECTS = [
@@ -25,9 +23,9 @@ const PROJECTS = [
     label: "AI \u00b7 Chat workspace",
     title: "PromptSphere",
     description:
-      "A fast, minimal AI chat workspace designed for clean, secure and distraction-free conversations.",
-    flowLabel: "Architecture",
-    flow: ["React", "Express API", "OpenAI API", "MongoDB"],
+      "A minimal AI chat workspace where users send messages, receive AI-generated responses, and manage conversations through a full-stack application.",
+    flowLabel: "Product flow",
+    flow: ["Send message", "Process request", "Generate response", "Save conversation"],
     tags: ["React", "Node.js", "Express", "MongoDB", "OpenAI API"],
     demoUrl: "https://prompt-sphere-gules.vercel.app/",
     sourceUrl: "https://github.com/KaranDev316/PromptSphere",
@@ -57,10 +55,14 @@ export const WorkSection = () => {
             <p>{project.description}</p>
             <div className="flow" aria-label={project.flowLabel}>
               {project.flow.map((step, index) => (
-                <Fragment key={step}>
-                  {index > 0 && <span className="arrow">&rarr;</span>}
-                  <span>{step}</span>
-                </Fragment>
+                <span className="step" key={step}>
+                  {index > 0 && (
+                    <span className="arrow" aria-hidden="true">
+                      &rarr;
+                    </span>
+                  )}
+                  <span className="chip">{step}</span>
+                </span>
               ))}
             </div>
             <ul className="tags">

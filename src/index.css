@@ -179,20 +179,22 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
 .fact p { font-size: 15px; color: var(--muted); margin: 0; }
 
 /* work */
-/* text column is slightly wider than the mockup so the product-flow labels fit on one line */
+/* text column stays the wider track in both layouts so the product-flow labels get the most room */
 .case { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 56px; align-items: center; padding-block: 56px; border-top: 1px solid var(--line); }
 .case:first-of-type { border-top: 0; padding-top: 0; }
+.case.flip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
 .case.flip .case-text { order: 2; }
 @media (max-width: 900px) {
-  .case { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 40px; }
+  .case, .case.flip { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 40px; }
   .case.flip .case-text { order: 0; }
 }
 .case-text .label { margin-bottom: 14px; display: block; }
 .case h3 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -.03em; margin: 0 0 14px; line-height: 1; }
 .case p { margin: 0 0 24px; max-width: 30em; color: var(--muted); font-size: 1.06rem; }
-.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 6px; margin-bottom: 22px; }
-.flow span { font-family: var(--font-mono); font-size: 12px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); white-space: nowrap; }
-.flow span.arrow { border: 0; background: none; padding-inline: 0; color: var(--accent); }
+.flow { display: flex; flex-wrap: wrap; align-items: stretch; gap: 5px; margin-bottom: 22px; }
+.flow .step { display: inline-flex; align-items: center; gap: 5px; }
+.flow .chip { font-family: var(--font-mono); font-size: 12px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); white-space: nowrap; }
+.flow .arrow { font-family: var(--font-mono); font-size: 12px; line-height: 1; color: var(--accent); }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 26px; }
 .tags li { list-style: none; font-family: var(--font-mono); font-size: 12px; padding: 5px 10px; border-radius: 6px; background: var(--surface-2); }
 .links { display: flex; gap: 22px; font-weight: 600; font-size: 15px; }
