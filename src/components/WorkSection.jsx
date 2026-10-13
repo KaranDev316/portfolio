@@ -9,7 +9,7 @@ const PROJECTS = [
     description:
       "Discover startups, enrich company profiles with website data, and evaluate investment fit in one workflow. VC Intelligence helps investors move from company discovery to structured research faster.",
     flowLabel: "Product flow",
-    flow: ["Search", "Enrich with live data", "Score fit"],
+    flow: ["Discover startups", "Enrich company data", "Assess investment fit"],
     tags: ["Next.js", "TypeScript"],
     demoUrl: "https://vc-intelligence-gray.vercel.app/",
     sourceUrl: "https://github.com/KaranDev316/VC-Intelligence",
