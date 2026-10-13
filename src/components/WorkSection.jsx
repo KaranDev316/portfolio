@@ -108,7 +108,7 @@ export const WorkSection = () => {
     <section id="work">
       <div className="sec-head">
         <div className="label">Selected work</div>
-        <h2>Selected work, built around real problems.</h2>
+        <h2>Products I&apos;ve built and explored.</h2>
       </div>
 
       {PROJECTS.map((project) => (

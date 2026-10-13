@@ -172,6 +172,12 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
   .about-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .about-grid > .label { display: none; }
 }
+/* tablet range: the 200px label column leaves section headings barely too
+   narrow to sit on one line, so narrow it while the two-column layout lasts.
+   .about-grid follows .sec-head so the about body stays aligned under its heading. */
+@media (min-width: 761px) and (max-width: 1000px) {
+  .sec-head, .about-grid { grid-template-columns: minmax(0, 150px) minmax(0, 1fr); }
+}
 .about-body p { margin: 0 0 18px; max-width: 38em; color: var(--muted); }
 .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 34px; }
 @media (max-width: 860px) {
