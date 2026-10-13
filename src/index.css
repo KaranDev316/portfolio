@@ -30,12 +30,6 @@
   --trace-hot: #8fa6ff;
   --shadow: 0 30px 60px -30px rgba(13, 20, 36, .35);
   /* product mockups keep their own fixed colours */
-  --m-dark: #070a12;
-  --m-dark-2: #111827;
-  --m-dark-line: #243049;
-  --m-dark-fg: #e8edf8;
-  --m-dark-dim: #7f8cab;
-  --m-blue: #4c82ff;
   --m-light: #ffffff;
   --m-light-line: #e4e6ec;
   --m-light-fg: #0a0a0f;
@@ -217,24 +211,11 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
 .mock .chrome .d { display: flex; gap: 6px; }
 .mock .chrome .d i { width: 9px; height: 9px; border-radius: 50%; background: currentColor; opacity: .25; }
 .mock .chrome .u { flex: 1; min-width: 0; padding: 4px 10px; border-radius: 6px; opacity: .8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.mock.dark { background: var(--m-dark); color: var(--m-dark-fg); }
-.mock.dark .chrome { border-bottom: 1px solid var(--m-dark-line); color: var(--m-dark-dim); }
-.mock.dark .chrome .u { background: var(--m-dark-2); }
 .mock.light { background: var(--m-light); color: var(--m-light-fg); }
 .mock.light .chrome { border-bottom: 1px solid var(--m-light-line); color: var(--m-light-dim); }
 .mock.light .chrome .u { background: #f2f3f7; }
-.vc { padding: 40px 26px 30px; text-align: center; }
-.vc h4 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.08; letter-spacing: -.025em; color: var(--m-blue); margin: 0 auto 12px; max-width: 12em; }
-.vc .sub { height: 6px; width: 70%; margin: 0 auto 8px; border-radius: 3px; background: var(--m-dark-line); }
-.vc .sub.s { width: 48%; margin-bottom: 22px; }
-.vc .b { display: flex; justify-content: center; gap: 8px; margin-bottom: 28px; }
-.vc .b i { height: 26px; border-radius: 6px; width: 96px; background: var(--m-blue); }
-.vc .b i + i { background: transparent; border: 1px solid var(--m-dark-line); width: 76px; }
-.vc .res { display: grid; gap: 8px; text-align: left; }
-.vc .res div { display: grid; grid-template-columns: 22px minmax(0, 1fr) 54px; gap: 12px; align-items: center; padding: 10px 12px; border: 1px solid var(--m-dark-line); border-radius: 8px; background: var(--m-dark-2); }
-.vc .res em { width: 22px; height: 22px; border-radius: 6px; background: var(--m-dark-line); }
-.vc .res span { height: 6px; border-radius: 3px; background: var(--m-dark-line); }
-.vc .res b { height: 6px; border-radius: 3px; background: var(--m-blue); }
+/* real product screenshot, framed like the drawn mockups */
+.mock.shot img { display: block; width: 100%; height: auto; }
 .ps { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; padding: 34px 26px 30px; align-items: center; }
 @media (max-width: 480px) {
   .ps { grid-template-columns: minmax(0, 1fr); }

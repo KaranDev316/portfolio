@@ -13,7 +13,12 @@ const PROJECTS = [
     tags: ["Next.js", "TypeScript"],
     demoUrl: "https://vc-intelligence-gray.vercel.app/",
     sourceUrl: "https://github.com/KaranDev316/VC-Intelligence",
-    mock: "dark",
+    image: {
+      src: "/projects/vc-intelligence.png",
+      alt: "VC Intelligence product screenshot: a curated deal pipeline ranking Stripe, Plaid, Merge and Alloy by investment-thesis fit.",
+      width: 1600,
+      height: 987,
+    },
     flip: false,
   },
   {
@@ -26,55 +31,32 @@ const PROJECTS = [
     tags: ["React", "Node.js", "Express", "MongoDB", "OpenAI API"],
     demoUrl: "https://prompt-sphere-gules.vercel.app/",
     sourceUrl: "https://github.com/KaranDev316/PromptSphere",
-    mock: "light",
     flip: true,
   },
 ];
 
-// Renders the product mockup for a project. Kept as a plain render helper
-// (rather than a component) so it can take two simple arguments without
-// needing prop-type declarations.
-const renderMockup = (variant, title) => {
-  if (variant === "dark") {
+// Renders the product visual for a project: the real product screenshot when
+// one is set, otherwise a hand-drawn mockup of the landing page. Kept as a
+// plain render helper (rather than a component) so it can take a single
+// project argument without needing prop-type declarations.
+const renderMockup = (project) => {
+  if (project.image) {
     return (
-      <div className="mock dark" role="img" aria-label={`Illustration of the ${title} landing page`}>
-        <div className="chrome">
-          <span className="d">
-            <i /><i /><i />
-          </span>
-          <span className="u">vc-intelligence</span>
-        </div>
-        <div className="vc">
-          <h4>Meet the startups worth funding&mdash;instantly</h4>
-          <div className="sub" />
-          <div className="sub s" />
-          <div className="b">
-            <i /><i />
-          </div>
-          <div className="res">
-            <div>
-              <em />
-              <span />
-              <b />
-            </div>
-            <div>
-              <em />
-              <span />
-              <b style={{ width: "70%" }} />
-            </div>
-            <div>
-              <em />
-              <span />
-              <b style={{ width: "45%" }} />
-            </div>
-          </div>
-        </div>
+      <div className="mock shot">
+        <img
+          src={project.image.src}
+          alt={project.image.alt}
+          width={project.image.width}
+          height={project.image.height}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     );
   }
 
   return (
-    <div className="mock light" role="img" aria-label={`Illustration of the ${title} landing page`}>
+    <div className="mock light" role="img" aria-label={`Illustration of the ${project.title} landing page`}>
       <div className="chrome">
         <span className="d">
           <i /><i /><i />
@@ -149,7 +131,7 @@ export const WorkSection = () => {
               </a>
             </div>
           </div>
-          {renderMockup(project.mock, project.title)}
+          {renderMockup(project)}
         </article>
       ))}
 
