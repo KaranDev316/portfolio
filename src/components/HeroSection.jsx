@@ -9,12 +9,11 @@ export const HeroSection = () => {
           Open to roles &middot; Ahmedabad, India
         </div>
         <h1>
-          I build AI products that <em>ship</em>.
+          I build software that solves <em>real problems</em>.
         </h1>
         <p className="lede">
-          Software engineer working across <b>Next.js, Node and the OpenAI API</b>. I take an
-          idea from a rough prompt to a deployed, fast, readable app, and I care about what
-          happens between the request and the response.
+          I build practical web applications, backend systems, and AI-powered features,{" "}
+          <b>from the first idea to deployment</b>.
         </p>
         <div className="cta">
           <a className="btn" href="#work">

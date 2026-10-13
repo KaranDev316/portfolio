@@ -105,7 +105,8 @@ h1 {
   font-weight: 800;
   letter-spacing: -.04em;
   line-height: .92;
-  font-size: clamp(3.1rem, 8.6vw, 6.6rem);
+  /* tuned for the current ~43-char headline (~3 lines at column width) */
+  font-size: clamp(2.6rem, 6.6vw, 4.7rem);
   margin: 0 0 28px;
   text-wrap: balance;
 }
