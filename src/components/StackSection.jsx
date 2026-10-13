@@ -1,16 +1,26 @@
 const TIERS = [
   {
     label: "Tier 1",
-    title: "Daily drivers",
+    title: "Core stack",
     note: "Where I move fastest.",
-    chips: ["HTML / CSS", "Tailwind CSS", "TypeScript", "JavaScript", "Node.js"],
+    chips: ["TypeScript", "React", "Python", "FastAPI", "PostgreSQL"],
     strong: true,
   },
   {
     label: "Tier 2",
-    title: "Working knowledge",
+    title: "Additional technologies",
     note: "Used on real projects.",
-    chips: ["React", "Express", "REST APIs", "MongoDB", "Python", "Java", "MySQL"],
+    chips: [
+      "HTML / CSS",
+      "Tailwind CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "REST APIs",
+      "MongoDB",
+      "MySQL",
+      "Java",
+    ],
     strong: false,
   },
 ];

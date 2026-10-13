@@ -211,7 +211,9 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
 
 /* stack tiers */
 .tiers { display: grid; gap: 16px; }
-.tier { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 32px; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); align-items: start; }
+/* the label column is wide enough for the longest tier title ("Additional
+   technologies") to hold one line, so the chips keep the rest of the card */
+.tier { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 32px; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); align-items: start; }
 @media (max-width: 760px) {
   .tier { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 22px; }
 }
@@ -220,8 +222,11 @@ h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 
 .chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; }
 .chips li { list-style: none; font-weight: 500; font-size: 15px; padding: 9px 15px; border-radius: 9px; border: 1px solid var(--line); background: var(--bg); transition: border-color .2s, color .2s; }
 .chips li:hover { border-color: var(--accent); }
+/* the core stack carries the career focus, so its chips sit a step larger and
+   heavier than the supporting tier while keeping the same radius and border */
 .tier.strong { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); }
-.tier.strong .chips li { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.tier.strong .chips { gap: 12px; }
+.tier.strong .chips li { font-size: 16px; font-weight: 600; padding: 11px 17px; background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
 
 /* contact */
 .closing { margin-top: 88px; padding: clamp(28px, 6vw, 64px); border-radius: 22px; background: var(--fg); color: var(--bg); position: relative; overflow: hidden; }
